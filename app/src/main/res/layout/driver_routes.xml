@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DealerSignUp">
+    tools:context=".DriverSignUp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome Dealer"
+        android:text="Select Routes"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -34,11 +35,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="Nature of material"
+            android:hint="Route 1 From"
             app:boxStrokeColor="#000">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/natureOfMaterial"
+                android:id="@+id/route1From"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -48,26 +49,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="Weight of material"
+            android:hint="Route 1 To"
             app:boxStrokeColor="#000">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/weightOfMaterial"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="numberDecimal" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Quantity"
-            app:boxStrokeColor="#000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/quantity"
+                android:id="@+id/route1To"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -77,15 +63,58 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="State"
+            android:hint="Route 2 From"
             app:boxStrokeColor="#000">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/state"
+                android:id="@+id/route2From"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Route 2 To"
+            app:boxStrokeColor="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/route2To"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Route 3 From"
+            app:boxStrokeColor="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/route3From"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Route 3 To"
+            app:boxStrokeColor="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/route3To"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
 
     </LinearLayout>
@@ -94,7 +123,7 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
