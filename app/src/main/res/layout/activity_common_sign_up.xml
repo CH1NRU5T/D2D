@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,10 +13,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:text="Sign Up"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/ll"
@@ -25,24 +28,33 @@
         android:layout_below="@+id/dealerSignUp"
         android:layout_marginHorizontal="40dp"
         android:layout_marginVertical="40dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dealerSignUp"
+        app:layout_constraintVertical_bias="0.096">
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_height="wrap_content">
+            android:orientation="horizontal">
+
             <RadioButton
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dealerRadio"
                 android:layout_weight="1"
-                android:text="Dealer"
-                android:layout_height="wrap_content"/>
+                android:text="Dealer" />
+
             <RadioButton
                 android:layout_width="wrap_content"
+                android:id="@+id/driverRadio"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Driver"
-                android:layout_height="wrap_content"/>
+                android:text="Driver" />
 
 
         </RadioGroup>
@@ -55,7 +67,7 @@
             app:boxStrokeColor="#000">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/dealerName"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -122,12 +134,19 @@
 
     </LinearLayout>
 
-    <ImageButton
+    <Button
+        android:id="@+id/submit"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
-        android:background="#345"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_baseline_arrow_forward_24" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="#345"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
