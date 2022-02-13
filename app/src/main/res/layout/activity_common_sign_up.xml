@@ -28,6 +28,25 @@
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Dealer"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Driver"
+                android:layout_height="wrap_content"/>
+
+
+        </RadioGroup>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,13 +121,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+
     <ImageButton
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
         android:background="#345"
-        android:src="@drawable/ic_baseline_arrow_forward_24"
-
-        android:layout_below="@+id/ll"/>
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_baseline_arrow_forward_24" />
 
 </RelativeLayout>
