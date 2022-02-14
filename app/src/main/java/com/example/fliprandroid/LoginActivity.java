@@ -45,6 +45,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 email = activityLoginBinding.email.getText().toString();
+                if(TextUtils.isEmpty(email)){
+                    activityLoginBinding.email.setError("This field cannot be empty");
+                    return;
+                }
                 JSONObject jsonObject = new JSONObject();
                 Toast.makeText(LoginActivity.this, email, Toast.LENGTH_SHORT).show();
                 try {
@@ -80,6 +84,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 email = activityLoginBinding.email.getText().toString();
+                if(TextUtils.isEmpty(email)){
+                    activityLoginBinding.email.setError("This field cannot be empty");
+                    return;
+                }
                 password = activityLoginBinding.password.getText().toString();
                 if (TextUtils.isEmpty(password)) {
                     activityLoginBinding.password.setError("Password cannot be Empty");

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -44,9 +45,25 @@ public class DealerSignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 natureOfMaterial = activityDealerSignUpBinding.natureOfMaterial.getText().toString();
+                if (TextUtils.isEmpty(natureOfMaterial)) {
+                    activityDealerSignUpBinding.natureOfMaterial.setError("This field cannot be empty");
+                    return;
+                }
                 weightOfMaterial = activityDealerSignUpBinding.weightOfMaterial.getText().toString();
+                if (TextUtils.isEmpty(weightOfMaterial)) {
+                    activityDealerSignUpBinding.weightOfMaterial.setError("This field cannot be empty");
+                    return;
+                }
                 quantity = activityDealerSignUpBinding.quantity.getText().toString();
+                if (TextUtils.isEmpty(quantity)) {
+                    activityDealerSignUpBinding.quantity.setError("This field cannot be empty");
+                    return;
+                }
                 state = activityDealerSignUpBinding.state.getText().toString();
+                if (TextUtils.isEmpty(state)) {
+                    activityDealerSignUpBinding.state.setError("This field cannot be empty");
+                    return;
+                }
                 postReq();
             }
         });

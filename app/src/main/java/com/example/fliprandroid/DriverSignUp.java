@@ -58,9 +58,25 @@ public class DriverSignUp extends AppCompatActivity {
                     return;
                 }
                 truckCapacity = activityDriverSignUpBinding.truckCapacity.getText().toString();
+                if (TextUtils.isEmpty(truckCapacity)) {
+                    activityDriverSignUpBinding.truckCapacity.setError("Truck number cannot be empty");
+                    return;
+                }
                 age = activityDriverSignUpBinding.age.getText().toString();
+                if (TextUtils.isEmpty(age)) {
+                    activityDriverSignUpBinding.age.setError("Truck number cannot be empty");
+                    return;
+                }
                 transporterName = activityDriverSignUpBinding.transporterName.getText().toString();
+                if (TextUtils.isEmpty(transporterName)) {
+                    activityDriverSignUpBinding.transporterName.setError("Truck number cannot be empty");
+                    return;
+                }
                 drivingExperience = activityDriverSignUpBinding.drivingExperience.getText().toString();
+                if (TextUtils.isEmpty(drivingExperience)) {
+                    activityDriverSignUpBinding.drivingExperience.setError("Truck number cannot be empty");
+                    return;
+                }
                 setContentView(R.layout.driver_routes);
                 findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -71,10 +87,30 @@ public class DriverSignUp extends AppCompatActivity {
                             return;
                         }
                         route1To = ((TextInputEditText) (findViewById(R.id.route1To))).getText().toString();
+                        if (TextUtils.isEmpty(route1From)) {
+                            ((TextInputEditText) (findViewById(R.id.route1To))).setError("This field cannot be empty");
+                            return;
+                        }
                         route2From = ((TextInputEditText) (findViewById(R.id.route2From))).getText().toString();
+                        if (TextUtils.isEmpty(route1From)) {
+                            ((TextInputEditText) (findViewById(R.id.route2From))).setError("This field cannot be empty");
+                            return;
+                        }
                         route2To = ((TextInputEditText) (findViewById(R.id.route2To))).getText().toString();
+                        if (TextUtils.isEmpty(route1From)) {
+                            ((TextInputEditText) (findViewById(R.id.route2To))).setError("This field cannot be empty");
+                            return;
+                        }
                         route3From = ((TextInputEditText) (findViewById(R.id.route3From))).getText().toString();
+                        if (TextUtils.isEmpty(route1From)) {
+                            ((TextInputEditText) (findViewById(R.id.route3From))).setError("This field cannot be empty");
+                            return;
+                        }
                         route3To = ((TextInputEditText) (findViewById(R.id.route3To))).getText().toString();
+                        if (TextUtils.isEmpty(route1From)) {
+                            ((TextInputEditText) (findViewById(R.id.route3To))).setError("This field cannot be empty");
+                            return;
+                        }
 
                         postreq();
                     }

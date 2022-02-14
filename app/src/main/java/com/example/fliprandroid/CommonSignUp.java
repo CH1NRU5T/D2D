@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
@@ -47,10 +48,30 @@ public class CommonSignUp extends AppCompatActivity {
 
     private void launchActivity(Intent intent) {
         name = Objects.requireNonNull(activityCommonSignUpBinding.name.getText()).toString();
+        if (TextUtils.isEmpty(name)) {
+            activityCommonSignUpBinding.email.setError("This field cannot be empty");
+            return;
+        }
         userName = Objects.requireNonNull(activityCommonSignUpBinding.userName.getText()).toString();
+        if (TextUtils.isEmpty(userName)) {
+            activityCommonSignUpBinding.email.setError("This field cannot be empty");
+            return;
+        }
         email = Objects.requireNonNull(activityCommonSignUpBinding.email.getText()).toString();
+        if (TextUtils.isEmpty(email)) {
+            activityCommonSignUpBinding.email.setError("This field cannot be empty");
+            return;
+        }
         phoneNumber = Objects.requireNonNull(activityCommonSignUpBinding.phoneNumber.getText()).toString();
+        if (TextUtils.isEmpty(phoneNumber)) {
+            activityCommonSignUpBinding.email.setError("This field cannot be empty");
+            return;
+        }
         password = Objects.requireNonNull(activityCommonSignUpBinding.password.getText()).toString();
+        if (TextUtils.isEmpty(password)) {
+            activityCommonSignUpBinding.email.setError("This field cannot be empty");
+            return;
+        }
 
         Bundle bundle = new Bundle();
         bundle.putString("name", name);
