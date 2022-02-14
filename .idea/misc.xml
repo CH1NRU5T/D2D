@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/activity_common_sign_up.xml" value="0.1578125" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/activity_dealer_dashboard.xml" value="0.1578125" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/activity_dealer_sign_up.xml" value="0.1578125" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/activity_driver_dashboard.xml" value="0.1578125" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/activity_driver_sign_up.xml" value="0.1578125" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/activity_main.xml" value="0.1578125" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/activity_sign_up.xml" value="0.1578125" />
+        <entry key="..\:/App_Dev/flipr-Android/app/src/main/res/layout/driver_routes.xml" value="0.1578125" />
         <entry key="..\:/flipr/fliprAndro/app/src/main/res/layout/activity_common_sign_up.xml" value="0.25677083333333334" />
-        <entry key="..\:/flipr/fliprAndro/app/src/main/res/layout/activity_dealer_dashboard.xml" value="0.25677083333333334" />
         <entry key="..\:/flipr/fliprAndro/app/src/main/res/layout/activity_dealer_sign_up.xml" value="0.264" />
-        <entry key="..\:/flipr/fliprAndro/app/src/main/res/layout/activity_driver_sign_up.xml" value="0.25677083333333334" />
-        <entry key="..\:/flipr/fliprAndro/app/src/main/res/layout/driver_routes.xml" value="0.25677083333333334" />
       </map>
     </option>
   </component>

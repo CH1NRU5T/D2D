@@ -2,6 +2,7 @@ package com.example.fliprandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -117,6 +118,16 @@ public class DriverSignUp extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 Log.d("helo", response.toString());
+                Bundle bundle1 = new Bundle();
+
+                try {
+                    bundle1.putString("id", response.getString("_id"));
+                    Intent intent = new Intent(DriverSignUp.this, DriverDashboard.class);
+                    intent.putExtras(bundle1);
+                    startActivity(intent);
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
             }
         }, new Response.ErrorListener() {
             @Override

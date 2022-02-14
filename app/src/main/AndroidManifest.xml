@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FliprAndroid">
         <activity
+            android:name=".DriverDashboard"
+            android:exported="false" />
+        <activity
             android:name=".DealerDashboard"
             android:exported="false" />
         <activity
@@ -19,7 +22,7 @@
             android:exported="false" />
         <activity
             android:name=".DealerSignUp"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CommonSignUp"
             android:exported="true">
