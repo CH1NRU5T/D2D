@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FliprAndroid">
         <activity
+            android:name=".ScreenOTP"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
@@ -28,9 +31,7 @@
             android:exported="true" />
         <activity
             android:name=".CommonSignUp"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
@@ -42,7 +43,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

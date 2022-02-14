@@ -72,7 +72,7 @@ public class DealerSignUp extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://flipr-backend-personnel.herokuapp.com/api/authDealer/registerDealer", jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://d2d-backend-personnel.herokuapp.com/api/authDealer/registerDealer", jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Log.d("helo", response.toString());

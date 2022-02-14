@@ -85,10 +85,6 @@ public class DriverSignUp extends AppCompatActivity {
     }
 
     private void postreq() {
-//        Post request to api to register the user
-//        String result = "Name: " + name + "\nUsername: " + userName + "\nEmail: " + email + "\nPhoneNumber: " + phoneNumber + "\nPassword: " + password;
-//        String result1 = "\nTruck number: "+truckNumber+"\nTruck Capacity: "+truckCapacity+"\nTransporter Name: "+transporterName+"\nExp: "+drivingExperience;
-//        Log.d("driver", route1From);
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("name", name);
@@ -114,7 +110,7 @@ public class DriverSignUp extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://flipr-backend-personnel.herokuapp.com/api/authDriver/registerDriver", jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://d2d-backend-personnel.herokuapp.com/api/authDriver/registerDriver", jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Log.d("helo", response.toString());
