@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             Bundle bundle = new Bundle();
-                            bundle.putString("id", response.get("_id").toString());
+                            bundle.putString("id", response.get("accessToken").toString());
                             intent.putExtras(bundle);
                             startActivity(intent);
                         } catch (JSONException e) {
