@@ -107,7 +107,7 @@ public class DriverSignUp extends AppCompatActivity {
             jsonObject.put("toCity2", route2To);
             jsonObject.put("fromCity3", route3From);
             jsonObject.put("toCity3", route3To);
-            jsonObject.put("isDriver", true);
+            jsonObject.put("userType", "driver");
 
 
         } catch (JSONException e) {
@@ -125,7 +125,7 @@ public class DriverSignUp extends AppCompatActivity {
                     Intent intent = new Intent(DriverSignUp.this, DriverDashboard.class);
                     intent.putExtras(bundle1);
                     startActivity(intent);
-                } catch (JSONException e){
+                } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }

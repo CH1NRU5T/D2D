@@ -65,7 +65,7 @@ public class DealerSignUp extends AppCompatActivity {
             jsonObject.put("city", "bharuch");
             jsonObject.put("password", password);
             jsonObject.put("state", state);
-            jsonObject.put("Boolean", true);
+            jsonObject.put("userType", "dealer");
 
 
         } catch (JSONException e) {
